@@ -2,11 +2,26 @@
 import { Box, Link, Flex, Text, Button, Image } from 'theme-ui'
 
 const images = [
-  'https://res.cloudinary.com/dxrjeyjpn/image/private/s--R4LxDDF3--/c_thumb,w_200,g_face/v1/tmra_landing/tmra_example1_yqrbtc.jpg',
-  'https://res.cloudinary.com/dxrjeyjpn/image/private/s--vNQosG0l--/c_thumb,w_200,g_face/v1/tmra_landing/tmra_example2_hs3o3d.jpg',
-  'https://res.cloudinary.com/dxrjeyjpn/image/private/s--mVwPvN6G--/c_thumb,w_200,g_face/v1/tmra_landing/tmra_voxel_ex2_vabov9.jpg',
-  'https://res.cloudinary.com/dxrjeyjpn/image/private/s--iMcrWdhe--/c_thumb,w_200,g_face/v1/tmra_landing/tmra_comicbook_ex2_fdxttr.jpg',
-  'https://res.cloudinary.com/dxrjeyjpn/image/private/s--YLolHWMc--/c_thumb,w_200,g_face/v1/tmra_landing/ModernFantasy_ex1_i1bbfa.jpg',
+  {
+    imgUrl: 'https://res.cloudinary.com/dxrjeyjpn/image/private/s--R4LxDDF3--/c_thumb,w_200,g_face/v1/tmra_landing/tmra_example1_yqrbtc.jpg',
+    altText: 'Large creature surrounded by misty forest',
+  },
+  {
+    imgUrl: 'https://res.cloudinary.com/dxrjeyjpn/image/private/s--mVwPvN6G--/c_thumb,w_200,g_face/v1/tmra_landing/tmra_voxel_ex2_vabov9.jpg',
+    altText: 'voxelated forest scene with a bridge going over water',
+  },
+  {
+    imgUrl: 'https://res.cloudinary.com/dxrjeyjpn/image/private/s--iMcrWdhe--/c_thumb,w_200,g_face/v1/tmra_landing/tmra_comicbook_ex2_fdxttr.jpg',
+    altText: 'Comic book scene of many important looking peope in a room',
+  },
+  {
+    imgUrl: 'https://res.cloudinary.com/dxrjeyjpn/image/private/s--YLolHWMc--/c_thumb,w_200,g_face/v1/tmra_landing/ModernFantasy_ex1_i1bbfa.jpg',
+    altText: 'Dystopian scene of dilapidated buildings in a city around a stray dog',
+  },
+  {
+    imgUrl: 'https://res.cloudinary.com/dxrjeyjpn/image/private/s--vNQosG0l--/c_thumb,w_200,g_face/v1/tmra_landing/tmra_example2_hs3o3d.jpg',
+    altText: 'Spikey creature in an action pose over rocky terrain',
+  }
 ]
 
 const Hero = () => {
@@ -24,7 +39,7 @@ const Hero = () => {
             <Link href='https://app.tmra.ai' target='_blank'><Button sx={{width: '100%'}}>Launch TMRA</Button></Link>
           </Flex>
           <Flex sx={{alignItems: 'center', gap: '2', flexWrap: 'wrap', display: ['none', 'flex']}}>
-            { images.map((image, index) => {
+            { images.map((imageInfo, index) => {
                 return <Image 
                           key={index} 
                           // height={125} 
@@ -35,7 +50,8 @@ const Hero = () => {
                             maxWidth: ['100px', '100px', '125px'],
                             borderRadius: '10px',
                           }} 
-                          src={image} 
+                          src={imageInfo.imgUrl} 
+                          alt={imageInfo.altText}
                         />
               })
             }
