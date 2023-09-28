@@ -6,7 +6,9 @@ or by clicking [here](https://app.tmra.ai).
 
 ## Development
 
-Built using [Vite](https://vitejs.dev/), [react](https://reactjs.org/) and [ThemeUI](https://theme-ui.com/). 
+Built using [Vite](https://vitejs.dev/), [react](https://reactjs.org/), [Typescript](https://www.typescriptlang.org/), 
+[ThemeUI](https://theme-ui.com/), and [Radix](https://radix-ui.com/).
+
 To run locally, clone the repo and run `yarn install` to install dependencies. Then run `yarn dev` to start 
 the dev server.
 
