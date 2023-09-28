@@ -63,9 +63,7 @@ const ContactForm = ({showForm, setShowForm}: ContactFormProps) => {
       <Label htmlFor="email">Email*</Label>
       <Input type="email" name="email" id="email" mb={3} required />
       <Label htmlFor="message">Message</Label>
-      <Textarea name="message" id="message" rows={6} mb={3} />
-      <Label htmlFor='attachment'>Attach Files</Label>
-      <Input type="file" id="attachment" name="attachment" sx={{border: 'none'}} />
+      <Textarea name="message" id="message" rows={6} mb={3} />      
       <Box>
         <Label mb={3}>
           <Checkbox />
