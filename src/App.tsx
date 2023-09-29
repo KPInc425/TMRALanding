@@ -5,7 +5,7 @@ import Hero from './components/Hero'
 import Reinforcement from './components/Reinforcement'
 import Discord from './components/Discord'
 import VideoGallery from './components/VideoGallery'
-import Contact from './components/Contact'
+/* import Contact from './components/Contact' */
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { useState } from 'react'
