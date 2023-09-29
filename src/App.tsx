@@ -3,6 +3,7 @@ import { theme } from './themes/defaultTheme'
 import './App.css'
 import Hero from './components/Hero'
 import Reinforcement from './components/Reinforcement'
+import Discord from './components/Discord'
 import VideoGallery from './components/VideoGallery'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -21,9 +22,10 @@ function App() {
       { activeView == 'home' &&
         <>
           <Hero />
+          <Discord />
           <Reinforcement />
           <VideoGallery />
-          <Contact />
+          {/* <Contact /> */}
         </>
       }
       { activeView == 'terms' &&
