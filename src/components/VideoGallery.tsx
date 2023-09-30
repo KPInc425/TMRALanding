@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Box, Link, Flex, Embed } from "theme-ui";
+import { Box, Link, Flex, Embed, Button } from "theme-ui";
 
 // const videos = [
 //   {
@@ -18,12 +18,16 @@ import { Box, Link, Flex, Embed } from "theme-ui";
 
 const VideoGallery = () => {
   return (
-    <Box py={['4','6']} sx={{backgroundColor: 'text'}}>
+    <Box py={['4','5']} className="terms-gradient">
       <Box mx="auto" sx={{ width: "80vw", textAlign: "center" }}>
-        <Link href="https://app.tmra.ai" sx={{variant: 'links.default', fontSize: '5'}}>Play Now</Link>
         <Flex pt='4' sx={{ justifyContent: "center", gap: "5" }}>
           <Embed src="https://www.youtube.com/embed/7eZkuLe7_Dk" />
         </Flex>
+        <Link href="https://app.tmra.ai" sx={{variant: 'links.default', fontSize: '5'}}>
+          <Button mt='4'>  
+            Play Now
+          </Button>
+        </Link>
       </Box>
     </Box>
   );

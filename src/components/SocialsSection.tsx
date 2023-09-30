@@ -5,7 +5,7 @@ import Discord from './Discord'
 
 const SocialsSection = () => {
   return (
-    <Flex py={['1','4']} sx={{backgroundColor: 'text', justifyContent: 'center', alignItems: 'center'}}>
+    <Flex py={['1','3']} className='terms-gradient' sx={{justifyContent: 'center', alignItems: 'center'}}>
         <Discord />
     </Flex>
   )
