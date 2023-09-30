@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Box, Button, Flex, Link, Text } from 'theme-ui'
+import { Button, Flex, Link, Text } from 'theme-ui'
 
 import { DiscordLogoIcon } from '@radix-ui/react-icons';
 

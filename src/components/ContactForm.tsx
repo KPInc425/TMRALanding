@@ -1,9 +1,8 @@
 /** @jsxImportSource theme-ui */
 
-import { useRef, useState } from 'react'
+// import { useRef, useState } from 'react'
 
-import { Box, Input, Button, Label, Checkbox, Textarea, Flex } from 'theme-ui'
-import Toaster from './Toaster'
+import { Input, Button, Label, Textarea, Flex } from 'theme-ui'
 
 type ContactFormProps = {
   showForm: boolean
@@ -13,22 +12,9 @@ type ContactFormProps = {
   handleErrorToaster: () => void
 }
 
-// type ToasterHandle = {
-//   publish: () => void;
-// };
-
 
 const ContactForm = ({showForm, setShowForm, setToasterText, handleSuccessToaster, handleErrorToaster}: ContactFormProps) => {
-  // const successToasterRef = useRef<ToasterHandle>(null)
-  // const errorToasterRef = useRef<ToasterHandle>(null)
-  // const [toasterText, setToasterText] = useState('')
-  // const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
-  //   e.preventDefault()
-  //   console.log('submitted')
-  //   console.log((e.target as HTMLFormElement).name.value)
-  //   console.log((e.target as HTMLFormElement).email.value)
-  //   console.log((e.target as HTMLFormElement).message.value)
-  // }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // console.log('submitted')
@@ -107,8 +93,6 @@ const ContactForm = ({showForm, setShowForm, setToasterText, handleSuccessToaste
           <Button sx={{variant: 'buttons.basic', width: '200px'}} onClick={() => setShowForm(!showForm)}>Cancel</Button>
         </Flex>
       </form>
-      {/* <Toaster ref={successToasterRef} bgColor={'rgb(90,106,79)'}>{toasterText}</Toaster>
-      <Toaster ref={errorToasterRef} bgColor={'crimson'}>{toasterText}</Toaster> */}
     </>
   )
 }

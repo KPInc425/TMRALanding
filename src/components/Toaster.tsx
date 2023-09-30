@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import { useState, useImperativeHandle, forwardRef} from 'react';
 import * as ToastPrimitive from '@radix-ui/react-toast';
-import { Box, Button, Flex, Text } from 'theme-ui';
+import { Box, Flex, Text } from 'theme-ui';
 
 import { Cross2Icon } from '@radix-ui/react-icons';
 
