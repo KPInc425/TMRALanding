@@ -1,17 +1,21 @@
 /** @jsxImportSource theme-ui */
-import { Box, Link } from 'theme-ui'
+import { Box, Button, Flex, Link, Text } from 'theme-ui'
+
+import { DiscordLogoIcon } from '@radix-ui/react-icons';
 
 const discordInvite = 'https://discord.gg/kFcJvbbt2d';
 
 const Discord = () => {
   return (
-    <Box py={['2','2']} my={['4']} sx={{backgroundColor: 'text'}}>
-      <Box mx="auto" sx={{ width: "80vw", textAlign: "center" }}>
-        <Link href={discordInvite} sx={{variant: 'links.default', fontSize: '5'}}>Join TMRA Discord</Link>
-      </Box>
-    </Box>
+    <Link href={discordInvite} target='_blank'>
+      <Button px='3' py='2'>
+        <Flex sx={{alignItems: 'center', gap: '2'}}>
+          <DiscordLogoIcon sx={{width: '30px', height: '30px'}}/>
+          <Text>Discord</Text>
+        </Flex>
+      </Button>
+    </Link>
   )
-    
 }
 
 export default Discord
